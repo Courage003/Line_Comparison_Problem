@@ -15,11 +15,13 @@ public class LineComparison {
         double length1 = calculateLineLength(x1, y1, x2, y2);
         double length2 = calculateLineLength(x3, y3, x4, y4);
 
-        // Check equality
-        if (Double.valueOf(length1).equals(length2)) {
+        int comparison = Double.compare(length1, length2);
+        if (comparison == 0) {
             System.out.println("The two lines are equal.");
+        } else if (comparison > 0) {
+            System.out.println("The first line is longer than the second line.");
         } else {
-            System.out.println("The two lines are not equal.");
+            System.out.println("The first line is shorter than the second line.");
         }
     }
 }
