@@ -9,8 +9,17 @@ public class LineComparison {
 
         double x1 = 1, y1 = 2, x2 = 4, y2 = 6;
 
-        // Length of the line
-        double length = calculateLineLength(x1, y1, x2, y2);
-        System.out.printf("The length of the line is: %.2f\n", length);
+        double x3 = 1, y3 = 2, x4 = 4, y4 = 6;
+
+        // Lengths of the lines
+        double length1 = calculateLineLength(x1, y1, x2, y2);
+        double length2 = calculateLineLength(x3, y3, x4, y4);
+
+        // Check equality
+        if (Double.valueOf(length1).equals(length2)) {
+            System.out.println("The two lines are equal.");
+        } else {
+            System.out.println("The two lines are not equal.");
+        }
     }
 }
